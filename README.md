@@ -27,13 +27,11 @@ A comparative study testing whether pairing farmer's-market produce provision wi
 ## Reproducing the pipeline
 
 ```
-pip install pandas numpy scipy scikit-learn xgboost matplotlib seaborn
+pip install pandas numpy scipy statsmodels scikit-learn xgboost matplotlib seaborn
 cd scripts
 python 01_eda.py
 python 02_visualizations.py
 python 03_modeling.py
-python 04_build_report.py
-python 05_build_paper.py
 python 06_regression_plots.py
 ```
 

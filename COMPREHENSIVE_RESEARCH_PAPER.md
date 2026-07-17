@@ -213,4 +213,4 @@ Guided nutrition support, whether from a dietitian or an AI assistant, was assoc
 
 **Data source:** Saka, K. Cardiovascular Disease Dataset (cleaned), derived from Kaggle `sulianova/cardiovascular-disease-dataset`. https://github.com/Kafayatjumai/Cardiovascular-Disease-Dataset
 
-**Reproducibility:** `notebooks/bp_study_colab.ipynb` walks the full pipeline end to end for Google Colab; the same pipeline also runs as standalone scripts, `scripts/01_eda.py` through `scripts/06_regression_plots.py`. Full intermediate output in `results/eda_summary.md`, `results/modeling_summary.md`, and `results/model_comparison.csv`. All eleven figures referenced above are in `figures/`.
+**Reproducibility:** `notebooks/bp_study_colab.ipynb` walks the full pipeline end to end for Google Colab, reading the dataset directly from this repo; the same pipeline also runs as standalone scripts: `scripts/01_eda.py`, `02_visualizations.py`, `03_modeling.py`, `06_regression_plots.py`, in that order. Full intermediate output in `results/eda_summary.md`, `results/modeling_summary.md`, and `results/model_comparison.csv`. All eleven figures referenced above are in `figures/`.
