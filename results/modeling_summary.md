@@ -1,46 +1,46 @@
-# Modeling Summary — Farmer's Market Produce & Blood Pressure Study
+# Modeling Summary, Farmer's Market Produce & Blood Pressure Study
 
 ## Target: `systolic_change`
 
 | model             |   r2_mean |   r2_std |   rmse_mean |   mae_mean |
 |:------------------|----------:|---------:|------------:|-----------:|
-| Random Forest     |     0.379 |    0.157 |       3.202 |      2.620 |
-| Ridge Regression  |     0.294 |    0.159 |       3.426 |      2.738 |
-| Linear Regression |     0.286 |    0.158 |       3.446 |      2.758 |
-| XGBoost           |     0.269 |    0.165 |       3.466 |      2.804 |
+| Random Forest     |     0.418 |    0.071 |       3.175 |      2.557 |
+| XGBoost           |     0.286 |    0.106 |       3.507 |      2.765 |
+| Ridge Regression  |     0.234 |    0.146 |       3.626 |      2.878 |
+| Linear Regression |     0.223 |    0.148 |       3.653 |      2.899 |
 
 **Winner (highest 5-fold CV mean R^2): Random Forest**
 
-Held-out 80/20 test split (unbiased final estimate): R^2 = 0.450, RMSE = 3.60, MAE = 2.99
+Held-out 80/20 test split (unbiased final estimate): R^2 = 0.351, RMSE = 3.31, MAE = 2.59
 
 **Top 5 features (Feature Importance):**
 
-- `adherence_pct`: 0.457
-- `guidance_sessions_or_interactions`: 0.044
-- `group_Control_NoGuidance`: 0.027
-- `produce_cabbage_kg`: 0.025
-- `bmi`: 0.020
+- `adherence_pct`: 0.539
+- `produce_radishes_kg`: 0.025
+- `produce_lettuce_kg`: 0.021
+- `bmi`: 0.021
+- `produce_onions_kg`: 0.017
 
 ## Target: `diastolic_change`
 
 | model             |   r2_mean |   r2_std |   rmse_mean |   mae_mean |
 |:------------------|----------:|---------:|------------:|-----------:|
-| Random Forest     |     0.321 |    0.064 |       2.109 |      1.682 |
-| Ridge Regression  |     0.195 |    0.097 |       2.294 |      1.842 |
-| Linear Regression |     0.183 |    0.098 |       2.311 |      1.856 |
-| XGBoost           |     0.181 |    0.064 |       2.318 |      1.853 |
+| Random Forest     |     0.321 |    0.109 |       2.094 |      1.670 |
+| XGBoost           |     0.164 |    0.084 |       2.332 |      1.852 |
+| Ridge Regression  |     0.142 |    0.264 |       2.323 |      1.861 |
+| Linear Regression |     0.132 |    0.271 |       2.335 |      1.870 |
 
 **Winner (highest 5-fold CV mean R^2): Random Forest**
 
-Held-out 80/20 test split (unbiased final estimate): R^2 = 0.237, RMSE = 2.16, MAE = 1.75
+Held-out 80/20 test split (unbiased final estimate): R^2 = 0.386, RMSE = 2.10, MAE = 1.62
 
 **Top 5 features (Feature Importance):**
 
-- `adherence_pct`: 0.340
-- `guidance_sessions_or_interactions`: 0.069
-- `produce_cauliflower_kg`: 0.040
-- `total_produce_kg_provided`: 0.033
-- `group_Dietitian`: 0.025
+- `adherence_pct`: 0.285
+- `group_Dietitian`: 0.060
+- `produce_cauliflower_kg`: 0.046
+- `guidance_sessions_or_interactions`: 0.045
+- `total_produce_kg_provided`: 0.035
 
 ## Stretch Goal Not Run
 

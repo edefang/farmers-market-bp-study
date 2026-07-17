@@ -37,7 +37,7 @@ def df_to_md(df: pd.DataFrame, floatfmt: str = ".2f") -> str:
 
 def main():
     df = load_data()
-    out = ["# EDA Summary — Farmer's Market Produce & Blood Pressure Study\n"]
+    out = ["# EDA Summary, Farmer's Market Produce & Blood Pressure Study\n"]
 
     # 1. Shape & integrity check
     out.append(section("1. Shape & Integrity Check"))
@@ -87,7 +87,7 @@ def main():
     out.append(df_to_md(top_dia) + "\n")
 
     # 5. Confound check
-    out.append(section("5. Confound Check — Adherence vs. Group / Demographics"))
+    out.append(section("5. Confound Check: Adherence vs. Group / Demographics"))
     adherence_by_group = df.groupby("group")["adherence_pct"].agg(["mean", "std", "median"])
     adherence_by_group = adherence_by_group.reindex(["Dietitian", "AI_Assistant", "Control_NoGuidance"])
     out.append("**Adherence (%) by group:**\n\n")
@@ -110,7 +110,7 @@ def main():
 
     # 6. Hypothesis tests (ANOVA / Kruskal-Wallis / ANCOVA) -- suggested next step
     # from README_dataset.md, formalizing what section 3 shows descriptively.
-    out.append(section("6. Hypothesis Tests — Is the Group Difference Real?"))
+    out.append(section("6. Hypothesis Tests: Is the Group Difference Real?"))
     for target in TARGETS:
         groups = [g[target].values for _, g in df.groupby("group")]
         f_stat, p_anova = stats.f_oneway(*groups)

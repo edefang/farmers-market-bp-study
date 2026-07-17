@@ -1,6 +1,6 @@
 # Farmer's Market Produce and Blood Pressure Study
 
-A comparative study testing whether pairing farmer's-market produce provision with guidance, either from a **dietitian** or an **AI nutrition assistant**, changes blood pressure outcomes more than giving out produce alone (**control**). 300 participants, 100 per arm, baseline demographics and BP sampled from a real 70,000-record cardiovascular dataset, with the study design itself (group assignment, produce baskets, adherence, follow-up BP) built synthetically on top.
+A comparative study testing whether pairing farmer's-market produce provision with guidance, either from a **dietitian** or an **AI nutrition assistant**, changes blood pressure outcomes more than giving out produce alone (**control**). 300 participants sampled (100 per arm), baseline demographics and BP sampled from a real 70,000-record cardiovascular dataset, with the study design itself (group assignment, produce baskets, adherence, follow-up BP) built synthetically on top. 4 rows with physiologically implausible baseline BP readings are dropped during cleaning, leaving 296 (99/99/98) analyzed.
 
 **Headline finding:** guided nutrition support (dietitian or AI) produced significantly larger BP reductions than unguided produce provision (p < 0.001), and that effect survived adjustment for adherence and baseline BP. Adherence percentage was the strongest predictor across every model tested, and the relationship between adherence and outcome is confirmed linear, not curved.
 
@@ -15,9 +15,10 @@ A comparative study testing whether pairing farmer's-market produce provision wi
 | Path | Contents |
 |---|---|
 | `COMPREHENSIVE_RESEARCH_PAPER.md` / `.pdf` | The full research paper (read this first) |
-| `BP_Study_Presentation.pptx` | 6-slide summary presentation with speaker notes |
-| `data/bp_farmers_market_study_dataset.csv` | 300 rows x 57 columns; the study dataset |
-| `scripts/` | Reproducible pipeline, run in order: `01_eda.py` → `02_visualizations.py` → `03_modeling.py` → `04_build_report.py` → `05_build_paper.py` → `06_regression_plots.py` |
+| `BP_Study_Presentation.pptx` | 6-slide summary presentation |
+| `notebooks/bp_study_colab.ipynb` | Same analysis end to end as a Google Colab notebook (upload the CSV when prompted) |
+| `data/bp_farmers_market_study_dataset.csv` | 300 rows x 57 columns as sourced; cleaned to 296 in `scripts/common.py` before analysis |
+| `scripts/` | Reproducible pipeline, run in order: `01_eda.py` → `02_visualizations.py` → `03_modeling.py` → `06_regression_plots.py` |
 | `figures/` | All 11 charts referenced in the paper (EDA, feature importance, regression fits) |
 | `results/eda_summary.md` | Full exploratory data analysis output |
 | `results/modeling_summary.md` | Full model comparison, cross-validation scores, feature importances |

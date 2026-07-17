@@ -26,6 +26,15 @@ def load_data():
     import pandas as pd
 
     df = pd.read_csv(DATA_PATH)
+
+    # 4 rows carry physiologically impossible baseline BP readings (data entry
+    # artifacts in the source file: 3 with baseline_diastolic_bp == 1000, paired
+    # with a follow-up around 997-998, almost certainly a stray zero upstream;
+    # 1 with baseline_systolic_bp == 17, not a survivable reading). Dropped
+    # rather than guessed at, consistent across the whole pipeline.
+    bad = (df["baseline_diastolic_bp"] > 250) | (df["baseline_systolic_bp"] < 60)
+    df = df[~bad].reset_index(drop=True)
+
     global PRODUCE_COLS
     PRODUCE_COLS = [c for c in df.columns if c.startswith("produce_")]
     return df

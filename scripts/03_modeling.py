@@ -147,7 +147,7 @@ def run_target(df, target, all_out):
     fig, ax = plt.subplots(figsize=(9, 7))
     imp_series.sort_values().plot.barh(ax=ax, color="#2E86AB")
     ax.set_xlabel(importance_label)
-    ax.set_title(f"Top 15 Features — {winner_name} ({target})")
+    ax.set_title(f"Top 15 Features, {winner_name} ({target})")
     fig.tight_layout()
     fig_path = FIGURES_DIR / f"06_feature_importance_{target}.png"
     fig.savefig(fig_path, dpi=200, bbox_inches="tight")
@@ -169,7 +169,7 @@ def main():
     print(f"Saved {RESULTS_DIR / 'model_comparison.csv'}")
 
     # Narrative summary
-    lines = ["# Modeling Summary — Farmer's Market Produce & Blood Pressure Study\n"]
+    lines = ["# Modeling Summary, Farmer's Market Produce & Blood Pressure Study\n"]
     for target in TARGETS:
         lines.append(f"\n## Target: `{target}`\n\n")
         cv_table = all_out["cv_tables"][target].copy()
