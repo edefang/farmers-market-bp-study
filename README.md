@@ -8,7 +8,7 @@ A comparative study testing whether pairing farmer's-market produce provision wi
 
 **[COMPREHENSIVE_RESEARCH_PAPER.md](COMPREHENSIVE_RESEARCH_PAPER.md)** (or the [PDF](COMPREHENSIVE_RESEARCH_PAPER.pdf)) is the full write-up: introduction, background and hypotheses, methodology, EDA, results, interpretation, limitations, and recommendations, with all 11 figures embedded inline.
 
-**[BP_Study_Presentation.pptx](BP_Study_Presentation.pptx)** is a 6-slide summary deck (title, abstract/objectives, data/methodology, key findings, results/discussion, conclusion), with speaker notes on every slide, sized for a 10-12 minute talk.
+**[BP_Study_Presentation.pptx](BP_Study_Presentation.pptx)** is a 6-slide summary deck (title, abstract/objectives, data/methodology, key findings, results/discussion, conclusion), sized for a 10-12 minute talk.
 
 ## Repository layout
 
