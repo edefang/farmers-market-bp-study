@@ -8,11 +8,14 @@ A comparative study testing whether pairing farmer's-market produce provision wi
 
 **[COMPREHENSIVE_RESEARCH_PAPER.md](COMPREHENSIVE_RESEARCH_PAPER.md)** (or the [PDF](COMPREHENSIVE_RESEARCH_PAPER.pdf)) is the full write-up: introduction, background and hypotheses, methodology, EDA, results, interpretation, limitations, and recommendations, with all 11 figures embedded inline.
 
+**[BP_Study_Presentation.pptx](BP_Study_Presentation.pptx)** is a 6-slide summary deck (title, abstract/objectives, data/methodology, key findings, results/discussion, conclusion), with speaker notes on every slide, sized for a 10-12 minute talk.
+
 ## Repository layout
 
 | Path | Contents |
 |---|---|
 | `COMPREHENSIVE_RESEARCH_PAPER.md` / `.pdf` | The full research paper (read this first) |
+| `BP_Study_Presentation.pptx` | 6-slide summary presentation with speaker notes |
 | `data/bp_farmers_market_study_dataset.csv` | 300 rows x 57 columns; the study dataset |
 | `scripts/` | Reproducible pipeline, run in order: `01_eda.py` → `02_visualizations.py` → `03_modeling.py` → `04_build_report.py` → `05_build_paper.py` → `06_regression_plots.py` |
 | `figures/` | All 11 charts referenced in the paper (EDA, feature importance, regression fits) |
